@@ -16,4 +16,9 @@ public class ContextConfig {
         return new Person(123, "Fucker");
     }
 
+    @Bean("OtherPerson")
+    public Person GetOtherPerson(){
+        return new Person(123, "Looser");
+    }
+
 }
