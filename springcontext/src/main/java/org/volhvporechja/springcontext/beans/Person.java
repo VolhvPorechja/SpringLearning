@@ -2,6 +2,7 @@ package org.volhvporechja.springcontext.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 //@Component
@@ -10,6 +11,9 @@ public class Person {
     private String name;
     private String taxId;
 
+    @Autowired
+    private Environment environment;
+
     Wallet wallet;
 
     @Autowired
@@ -17,7 +21,7 @@ public class Person {
         this.wallet = wallet;
     }
 
-    @Value("${fucker.taxid}")
+    @Value("${persons.fucker.taxid}")
     public void setTaxId(String taxId) {
         this.taxId = taxId;
     }
