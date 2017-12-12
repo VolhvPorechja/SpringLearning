@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.volhvporechja.springcontext.beans.Person;
 
 @Configuration
-@PropertySource("classpath:main.properties")
+@PropertySource("classpath:application.yml")
 @ComponentScan("org.volhvporechja.springcontext.beans")
 public class ContextConfig {
 

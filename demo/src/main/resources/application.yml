@@ -1,0 +1,22 @@
+management:
+  security:
+    enabled: false
+spring:
+  boot:
+    admin:
+      url: 'http://localhost:8888'
+logging:
+  level:
+    org.springframework.web: 'DEBUG'
+  file: 'my.log'
+
+server:
+  port: 8090
+
+services:
+  quotes:
+    connectionString: 'http://gturnquist-quoters.cfapps.io/api/random'
+
+persons:
+  fucker:
+    taxid: '2323-AAA-33434'
