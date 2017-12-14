@@ -28,6 +28,7 @@ public class QuotesService {
 
     @HystrixCommand(fallbackMethod = "NextQuoteFallback")
     public QuoteServiceResponse GetNextQuote() {
+
         Quote quote = template.getForObject(quotesServiceCS, Quote.class);
         return QuoteServiceResponse.Success(quote);
     }
