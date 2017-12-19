@@ -48,7 +48,14 @@ public class DemoApplication {
 	}
 
 	@Bean("OtherPerson")
+	@Profile("dev")
 	public Person GetOtherPerson() {
+		return new Person(123, "DEV-Looser" + Environment);
+	}
+
+	@Bean("OtherPerson")
+	@Profile("prod")
+	public Person GetOtherPersonForProd() {
 		return new Person(123, "Looser" + Environment);
 	}
 

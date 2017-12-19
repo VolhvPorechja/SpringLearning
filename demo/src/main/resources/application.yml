@@ -30,3 +30,12 @@ services:
 persons:
   fucker:
     taxid: '2323-AAA-33434'
+
+---
+
+spring:
+  profiles: dev
+
+persons:
+  fucker:
+    taxid: '2323-AAA-33434-DEVELOPMENT'
